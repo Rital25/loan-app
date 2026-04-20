@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Loan Prediction App</title>
+</head>
+<body>
+
+    <h2>Loan Repayment Predictor</h2>
+
+    <form action="/predict" method="post">
+
+        Monthly Income: <input type="number" name="monthly_income"><br><br>
+        Loan Amount: <input type="number" name="loan_amount"><br><br>
+        Debt to Income Ratio: <input type="number" step="0.01" name="debt_to_income_ratio"><br><br>
+        Previous Defaults: <input type="number" name="previous_defaults"><br><br>
+        Account Balance: <input type="number" name="account_balance"><br><br>
+
+        <button type="submit">Predict</button>
+    </form>
+
+    <h3>{{ prediction_text }}</h3>
+
+</body>
+</html>
